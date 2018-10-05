@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+}
+
+.navbar {
+    padding: 4rem;
+    background-color: $color-primary;
+    position: relative;
+
+    &__logo{
+
+        &--text {
+            text-align: center;
+            color: $color-secondary-white;
+
+            h1 {
+                text-decoration: underline;
+                font-size: 350%;
+                font-family: 'Ubuntu', sans-serif;
+            }
+
+            h2 {
+                text-align: center;
+                color: $color-secondary-white;
+                font-size: 150%;
+                font-family: 'Ubuntu', sans-serif;
+                
+            
+            }
+        }
+    }
+
+    &__picture {
+        position: absolute;
+        top: 50%; // Den ligger i mitten av navbaren
+        left: 10%;
+        transform: translate(-50%, -50%);
+    
+        img {
+            width: 80px;
+        }
+    }
+}
+
+
+
+
+body {
+    background-color: $color-secondary-gray;
+    background-image: url(/img/hero.jpg);
+    background-size: cover;
+}
+
+p {
+    font-size: $font-size-small;
+    color: $color-secondary-white;
+    line-height: 120%;
+    letter-spacing: 0.5px;
+    font-weight: 300;
+    font-family: 'ubuntu', sans-serif;
+    text-shadow: -0.3px 0 black, 0 0.3px black, 0.3px 0 black, 0 -0.3px black; // Skugga runt om texten så den blir mer läsbar för det är en vit text
+}
+
+main {
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 5rem;
+
+    @media screen and (max-width: 950px) {
+        flex-direction: column; // När media nås till 950px ändras flex så det blir en kollumn alltså går neråt
+        
+    }
+}
+
+.main__card {
+    background-color: $color-secondary-gray;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.5);
+    max-width: 300px;
+    margin: auto;
+    margin-top: 1rem;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+
+        &--img {
+            width: 100%;
+        }
+
+        &--info {
+            color: $color-secondary-white;
+            font-size: $font-size-medium;
+            font-family: 'Ubuntu', sans-serif;
+
+            &-text {
+                font-family: 'ubuntu', sans-serif;
+                color: $color-secondary-white;
+                margin: 2px;
+            }
+
+            &-select {
+                border: none;
+                background-color: $color-primary;
+                color: $color-secondary-white;
+                margin: 2px;
+                margin-bottom: 3rem;
+            }
+    
+        }
+
+        &--button {
+            border: none; 
+            outline: 0; // Blir ingen outline när man trycker på knappen
+            padding: 12px;
+            font-family: 'ubuntu', sans-serif;
+            color: $color-secondary-white;
+            background-color: $color-primary;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 2rem; 
+
+            &:hover {
+                background-color: rgba(21, 41, 51, 0.5);
+                transition: all .5s;
+            }
+        }
+  }
+
+.footer__container {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: $color-primary;
+    width: 100%;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    font-family: 'Ubuntu', sans-serif;
+
+    &--support {
+        display: flex;
+        flex-direction: column;
+        flex: 1 40%;
+        padding-left: 3rem;
+
+        @media screen and (max-width: 750px) {
+            flex: 1 100%;
+            padding: 0;
+
+            h2, h1 {
+                text-align: center;
+            }
+
+            a {
+                text-align: center;
+                margin-bottom: 3rem;
+            }
+        }
+
+        h2 {
+            padding-top: 0.5rem;
+            color: $color-secondary-white;
+            font-size: $font-size-medium;
+        }
+
+        h1 {
+            color: $color-secondary-white;
+            font-size: $font-size-large;  
+        }
+
+        a {
+            font-size: $font-size-medium;
+        }
+    }
+
+    &--info {
+        
+        display: flex;
+        flex-direction: column;
+        flex: 1 40%;
+        padding-right: 3rem;
+
+        @media screen and (max-width: 750px) {
+            padding: 0;
+
+            p {
+                margin-left: 2rem;
+                margin-right: 2rem;
+            }
+        }
+    
+        &-title {
+            font-size: $font-size-medium;
+            color: $color-secondary-white;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+            }
+
+        }
+  }
