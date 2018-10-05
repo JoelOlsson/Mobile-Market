@@ -1,2 +1,2 @@
 # Mobile-Market
-Sass &amp; Flexbox
+Sass &amp; Flexbox projekt
